@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geeks - Learning Application</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="root">
+    <!-- Navbar Start -->
+    <!-- 'navbar-default' is our custom class to apply Geeks styles -->
+    <nav class="navbar navbar-expand-lg navbar-default fixed-top">
+      <div class="container-fluid px-0">
+
+        <!-- A. Logo -->
+        <a class="navbar-brand ps-3" href="#">
+          <img src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg" alt="Geeks" class="logo-img">
+        </a>
+
+        <!-- B. Mobile User Icons (Visible on Mobile, Hidden on Desktop) -->
+        <!-- d-flex (display flex), d-lg-none (hide on large screens) -->
+        <div class="d-flex d-lg-none ms-auto me-2 align-items-center">
+          <!-- Theme Toggle -->
+          <a class="nav-link btn-icon rounded-circle" href="#">
+            <i class="bi bi-moon-stars"></i>
+          </a>
+          <!-- Notification -->
+          <a class="nav-link btn-icon rounded-circle indicator indicator-primary" href="#">
+            <i class="bi bi-bell"></i>
+          </a>
+          <!-- Avatar -->
+          <a class="nav-link ms-1" href="#">
+            <div class="avatar-sm">
+              <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="User" class="rounded-circle avatar-img">
+            </div>
+          </a>
+        </div>
+
+        <!-- C. Toggler Button (Mobile Menu) -->
+        <button class="navbar-toggler collapsed ms-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default">
+          <span class="hamburger-icon">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </span>
+        </button>
+
+        <!-- D. Collapsible Content -->
+        <div class="collapse navbar-collapse" id="navbar-default">
+
+          <!-- 1. Left Links (Browse, Landings, etc) -->
+          <ul class="navbar-nav mt-3 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ms-lg-3" href="#" role="button" data-bs-toggle="dropdown">Browse</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Landings</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Accounts</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">...</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- 2. Search Form -->
+          <form class="mt-3 mt-lg-0 ms-lg-3 d-flex align-items-center w-100 position-relative search-form">
+            <span class="position-absolute ps-3 search-icon">
+              <i class="bi bi-search text-muted"></i>
+            </span>
+            <input type="search" class="form-control ps-5 rounded-3" placeholder="Search Courses">
+          </form>
+
+          <!-- 3. Right Side Icons (Hidden on Mobile, Visible on Desktop) -->
+          <ul class="navbar-nav ms-auto navbar-right-wrap d-none d-lg-flex align-items-center pe-3">
+
+            <!-- Theme Toggle (Simplified) -->
+            <li class="nav-item">
+              <a class="nav-link btn-icon rounded-circle" href="#">
+                <i class="bi bi-moon-stars"></i>
+              </a>
+            </li>
+
+            <!-- Notification -->
+            <li class="nav-item ms-2">
+              <a class="nav-link btn-icon rounded-circle indicator indicator-primary" href="#">
+                <i class="bi bi-bell"></i>
+              </a>
+            </li>
+
+            <!-- Avatar -->
+            <li class="nav-item ms-3 dropdown">
+              <a class="nav-link p-0" href="#" role="button" data-bs-toggle="dropdown">
+                <div class="avatar-md position-relative">
+                  <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="avatar" class="rounded-circle avatar-img">
+                  <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                    <span class="visually-hidden">Online</span>
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+      <!-- Hero Section -->
+      <section class="bg-primary hero-spacing py-5" id="hero">
+        <div class="container">
+          <div class="row align-items-center g-0">
+            <div class="col-xl-5 col-lg-6 col-md-12">
+              <div class="py-5 py-lg-0">
+                <h1 class="text-white display-4 fw-bold mb-3">Welcome to Geeks UI Learning Application</h1>
+                <p class="hero-subtitle mb-4 lead pe-lg-8">Hand-picked Instructor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-dark fw-semibold px-4 py-2" href="#">Browse Courses</a>
+                  <a class="btn btn-white fw-semibold px-4 py-2" href="#">Are You Instructor?</a>
+                </div>
+              </div>
+            </div>
+            <div class="text-lg-end text-center col-xl-7 col-lg-6 col-md-12">
+              <img src="https://geeks-react.netlify.app/static/media/hero-img.c1489dfacfd7fadae59a.png" class="img-fluid" alt="Hero">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Icons Bar -->
+      <section class="bg-white features-bar shadow-sm border-bottom" id="features">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-md-4">
+              <div class="d-flex align-items-center px-lg-3">
+                <span class="feature-icon bg-light-warning rounded-circle text-warning fs-4"><i class="bi bi-play-circle"></i></span>
+                <div class="ms-3">
+                  <h4 class="mb-0 fw-semibold fs-5">30,000 online courses</h4>
+                  <p class="mb-0 text-muted small">Enjoy a variety of fresh topics</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 border-start-md">
+              <div class="d-flex align-items-center px-lg-3">
+                <span class="feature-icon bg-light-primary rounded-circle text-primary fs-4"><i class="bi bi-people"></i></span>
+                <div class="ms-3">
+                  <h4 class="mb-0 fw-semibold fs-5">Expert instruction</h4>
+                  <p class="mb-0 text-muted small">Find the right instructor for you</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 border-start-md">
+              <div class="d-flex align-items-center px-lg-3">
+                <span class="feature-icon bg-light-success rounded-circle text-success fs-4"><i class="bi bi-clock"></i></span>
+                <div class="ms-3">
+                  <h4 class="mb-0 fw-semibold fs-5">Lifetime access</h4>
+                  <p class="mb-0 text-muted small">Learn on your schedule</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1: Recommended to you -->
+      <section class="pt-lg-12 pb-lg-3 pt-8 pb-6" id="recommended-courses">
+        <div class="container">
+          <h2 class="mb-4 fw-bold px-2">Recommended to you</h2>
+          <div class="course-slider">
+            <!-- Card: GraphQL -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-graphql.f5dec42e4ae0102ebffa.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">GraphQL: introduction to graphQL for beginners</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 40m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">2.5</span> <span class="text-muted">(1,500)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$500</span> <del class="text-muted small">$600</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Brooklyn Simmons</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: JS -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="Page2/index.html">A Complete Beginner's Guide to JavaScript</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>4h 10m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">3.5</span> <span class="text-muted">(7,500)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$700</span> <del class="text-muted small">$850</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Jenny Wilson</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Node -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-node.291fe1cded8ebab181ab.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Beginning Node.js, Express & MongoDB Development</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 00m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">4.0</span> <span class="text-muted">(15,700)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$800</span> <del class="text-muted small">$950</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-3.d3ce7f20113e7d124501.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Sina Ray</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Laravel -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-laravel.48ab426cd3f0adc40dd9.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Laravel: The Ultimate Beginner's Guide Step by Step</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 00m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(2,500)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$170</span> <del class="text-muted small">$220</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-9.ce9a73de84b5e2cc414c.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Sobo Rikhan</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: React -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-react.999d5d4b7ef4771200c2.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">How to easily create a website with React</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 55m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,500)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-2.397cdd4b772a83b9166e.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>April Noms</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Most Popular -->
+      <section class="section-spacing" id="popular-courses">
+        <div class="container">
+          <h2 class="mb-4 fw-bold px-2">Most Popular</h2>
+          <div class="course-slider">
+            <!-- Card: HTML -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-html.427d9d6b3af64832dbc2.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">HTML Full Course - Build a Website Tutorial</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 16m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">3.0</span> <span class="text-muted">(1,600)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$550</span> <del class="text-muted small">$700</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-5.991ead30c8a647a4c57f.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Miston Wilson</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: JavaScript -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">A Complete Beginner's Guide to JavaScript</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(7,800)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-2.397cdd4b772a83b9166e.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>April Noms</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Node -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-node.291fe1cded8ebab181ab.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Beginning Node.js, Express & MongoDB Development</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 00m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">4.0</span> <span class="text-muted">(15,700)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$800</span> <del class="text-muted small">$950</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-3.d3ce7f20113e7d124501.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Sina Ray</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Laravel -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-laravel.48ab426cd3f0adc40dd9.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Laravel: The Ultimate Beginner's Guide</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 00m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(2,500)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$170</span> <del class="text-muted small">$220</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-9.ce9a73de84b5e2cc414c.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Sobo Rikhan</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: React -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-react.999d5d4b7ef4771200c2.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">How to easily create a website with React</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 55m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,500)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-2.397cdd4b772a83b9166e.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>April Noms</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Trending -->
+      <section class="section-spacing" id="trending-courses">
+        <div class="container">
+          <h2 class="mb-4 fw-bold px-2">Trending</h2>
+          <div class="course-slider">
+            <!-- Card: Angular -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-angular.8553e67e04af598d0cc4.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Angular - the complete guide for beginner</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,600)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-4.d0ed62998b9d77c2bac7.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Jacob Jones</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: CSS -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-css.e2fee8ac50e018baa8fc.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">CSS: ultimate course from beginner to advanced</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(17,000)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-7.34daf83d575c235d5d20.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Juanita Bell</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Python -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-python.0e5358f9e53a89fd75bd.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">The Python Course: build web application</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(7,800)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-10.1b06a2faf8b1d6b5aa34.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Ted Hawkins</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Wordpress -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-wordpress.d8a212a8a44f7edaccfb.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Wordpress: complete WordPress development</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(17,000)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-8.4f2c1e3f1054805416e6.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Claire Robertson</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Card: GraphQL -->
+            <div class="slide-item">
+              <div class="card course-card h-100 border-0 shadow-sm">
+                <a href="#"><img src="https://geeks-react.netlify.app/static/media/course-graphql.f5dec42e4ae0102ebffa.jpg" class="card-img-top rounded-top" alt=""></a>
+                <div class="card-body">
+                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Getting Started with GraphQL and React</a></h3>
+                  <ul class="mb-3 list-inline small text-muted">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 30m</li>
+                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                  </ul>
+                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(9,300)</span></div>
+                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$450</span> <del class="text-muted small">$550</del></div>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center small"><img src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg" class="rounded-circle avatar-xs me-2" alt=""><span>Brooklyn Simmons</span></div>
+                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer py-5 border-top">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          <div class="col-md-6 small text-muted">© 2024 Geeks. All Rights Reserved.</div>
+          <div class="col-md-6">
+            <nav class="nav justify-content-center justify-content-md-end footer-links small">
+              <a class="nav-link text-muted" href="#">Privacy</a>
+              <a class="nav-link text-muted" href="#">Terms</a>
+              <a class="nav-link text-muted" href="#">Feedback</a>
+              <a class="nav-link text-muted" href="#">Support</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Buy Now Floating -->
+    <a href="#" class="btn btn-dark floating-cart-btn shadow d-flex align-items-center px-4 py-3 fw-bold">
+      <i class="bi bi-cart3 me-2"></i> Buy Now
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Initialize course slider with Slick carousel
+      $('.course-slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="bi bi-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="bi bi-chevron-right"></i></button>',
+        responsive: [{
+            breakpoint: 1400,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>

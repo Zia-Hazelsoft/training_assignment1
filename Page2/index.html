@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geeks</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-default fixed-top">
+    <div class="container-fluid px-0">
+
+      <!-- A. Logo -->
+      <a class="navbar-brand ps-3" href="#">
+        <img src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg" alt="Geeks" class="logo-img">
+      </a>
+
+      <!-- B. Mobile User Icons (Visible on Mobile, Hidden on Desktop) -->
+      <!-- d-flex (display flex), d-lg-none (hide on large screens) -->
+      <div class="d-flex d-lg-none ms-auto me-2 align-items-center">
+        <!-- Theme Toggle -->
+        <a class="nav-link btn-icon rounded-circle" href="#">
+          <i class="bi bi-moon-stars"></i>
+        </a>
+        <!-- Notification -->
+        <a class="nav-link btn-icon rounded-circle indicator indicator-primary" href="#">
+          <i class="bi bi-bell"></i>
+        </a>
+        <!-- Avatar -->
+        <a class="nav-link ms-1" href="#">
+          <div class="avatar-sm">
+            <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="User" class="rounded-circle avatar-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- C. Toggler Button (Mobile Menu) -->
+      <button class="navbar-toggler collapsed ms-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default">
+        <span class="hamburger-icon">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </span>
+      </button>
+
+      <!-- D. Collapsible Content -->
+      <div class="collapse navbar-collapse" id="navbar-default">
+
+        <!-- 1. Left Links (Browse, Landings, etc) -->
+        <ul class="navbar-nav mt-3 mt-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ms-lg-3" href="#" role="button" data-bs-toggle="dropdown">Browse</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Web Development</a></li>
+              <li><a class="dropdown-item" href="#">Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Landings</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Web Development</a></li>
+              <li><a class="dropdown-item" href="#">Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Web Development</a></li>
+              <li><a class="dropdown-item" href="#">Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Accounts</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Web Development</a></li>
+              <li><a class="dropdown-item" href="#">Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">...</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Web Development</a></li>
+              <li><a class="dropdown-item" href="#">Design</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- 2. Search Form -->
+        <form class="mt-3 mt-lg-0 ms-lg-3 d-flex align-items-center w-100 position-relative search-form">
+          <span class="position-absolute ps-3 search-icon">
+            <i class="bi bi-search text-muted"></i>
+          </span>
+          <input type="search" class="form-control ps-5 rounded-3" placeholder="Search Courses">
+        </form>
+
+        <!-- 3. Right Side Icons (Hidden on Mobile, Visible on Desktop) -->
+        <ul class="navbar-nav ms-auto navbar-right-wrap d-none d-lg-flex align-items-center pe-3">
+
+          <!-- Theme Toggle (Simplified) -->
+          <li class="nav-item">
+            <a class="nav-link btn-icon rounded-circle" href="#">
+              <i class="bi bi-moon-stars"></i>
+            </a>
+          </li>
+
+          <!-- Notification -->
+          <li class="nav-item ms-2">
+            <a class="nav-link btn-icon rounded-circle indicator indicator-primary" href="#">
+              <i class="bi bi-bell"></i>
+            </a>
+          </li>
+
+          <!-- Avatar -->
+          <li class="nav-item ms-3 dropdown">
+            <a class="nav-link p-0" href="#" role="button" data-bs-toggle="dropdown">
+              <div class="avatar-md position-relative">
+                <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="avatar" class="rounded-circle avatar-img">
+                <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                  <span class="visually-hidden">Online</span>
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-lg-8 pb-lg-16 pt-8 pb-12 bg-primary">
+      <div class="container">
+        <div class="align-items-center row">
+          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+            <div class="py-5 py-lg-8">
+              <h1 class="text-white display-4 fw-semi-bold">Getting Started with JavaScript</h1>
+              <p class="text-white mb-6 lead">JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.</p>
+
+              <!-- Course Meta Info -->
+              <div class="d-flex align-items-center">
+                <a class="bookmark text-white text-decoration-none" href="#">
+                  <i class="bi bi-bookmark text-white-50 me-2"></i>Bookmark
+                </a>
+                <span class="text-white ms-3">
+                  <i class="bi bi-person text-white-50"></i> 1200 Enrolled
+                </span>
+                <span class="ms-4">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-white ms-1">(140)</span>
+                  </span>
+                </span>
+                <span class="text-white ms-4 d-none d-md-block">
+                  <i class="bi bi-bar-chart me-1"></i>
+                  <span class="align-middle">Intermediate</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Content Section -->
+    <section class="pb-5">
+      <div class="container">
+        <div class="row">
+          <!-- Left Column - Course Content -->
+          <div class="col-lg-8 col-md-12 mt-n8">
+            <div class="card">
+              <!-- Tab Navigation -->
+              <div class="card-header bg-white">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#contents" data-bs-toggle="tab">Contents</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#description" data-bs-toggle="tab">Description</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#reviews" data-bs-toggle="tab">Reviews</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#transcript" data-bs-toggle="tab">Transcript</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#faq" data-bs-toggle="tab">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tab Content -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <!-- Contents Tab -->
+                  <div class="tab-pane fade show active" id="contents">
+                    <div class="accordion" id="courseAccordion">
+
+                      <!-- Module 1 -->
+                      <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#module1">
+                            <strong>Introduction to JavaScript</strong>
+                          </button>
+                        </h2>
+                        <div id="module1" class="accordion-collapse collapse show" data-bs-parent="#courseAccordion">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <div>
+                                  <i class="bi bi-play-circle me-2 text-primary"></i>
+                                  <span>Introduction</span>
+                                </div>
+                                <span class="text-muted">1m 7s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <div>
+                                  <i class="bi bi-play-circle me-2 text-primary"></i>
+                                  <span>Installing Development Software</span>
+                                </div>
+                                <span class="text-muted">3m 11s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <div>
+                                  <i class="bi bi-play-circle me-2 text-primary"></i>
+                                  <span>Hello World Project from GitHub</span>
+                                </div>
+                                <span class="text-muted">2m 33s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Our Sample Website</span>
+                                </div>
+                                <span>2m 15s</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Module 2 -->
+                      <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2">
+                            <strong>JavaScript Beginning</strong>
+                          </button>
+                        </h2>
+                        <div id="module2" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Introduction</span>
+                                </div>
+                                <span>1m 41s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Adding JavaScript Code to a Web Page</span>
+                                </div>
+                                <span>3m 39s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Working with JavaScript Files</span>
+                                </div>
+                                <span>6m 18s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Formatting Code</span>
+                                </div>
+                                <span>2m 18s</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Module 3 -->
+                      <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3">
+                            <strong>Variables and Constants</strong>
+                          </button>
+                        </h2>
+                        <div id="module3" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Introduction</span>
+                                </div>
+                                <span>1m 19s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>What Is a Variable?</span>
+                                </div>
+                                <span>2m 11s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Declaring Variables</span>
+                                </div>
+                                <span>2m 30s</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Module 4 -->
+                      <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4">
+                            <strong>Program Flow</strong>
+                          </button>
+                        </h2>
+                        <div id="module4" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Introduction</span>
+                                </div>
+                                <span>1m 52s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Conditionals Using if()</span>
+                                </div>
+                                <span>4m 25s</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Module 5 -->
+                      <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module5">
+                            <strong>Functions</strong>
+                          </button>
+                        </h2>
+                        <div id="module5" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Introduction</span>
+                                </div>
+                                <span>1m 52s</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center px-0 text-muted">
+                                <div>
+                                  <i class="bi bi-lock me-2"></i>
+                                  <span>Function Basics</span>
+                                </div>
+                                <span>2m 46s</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Description Tab -->
+                  <div class="tab-pane fade" id="description">
+                    <h3 class="mb-3">Course Descriptions</h3>
+                    <p>If you're learning to program for the first time, or if you're coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they'll run on.</p>
+                    <p>Next, you'll explore the basics of the language, giving plenty of examples. Lastly, you'll put your JavaScript knowledge to work and modify a modern, responsive web page. When you're finished with this course, you'll have the skills and knowledge in JavaScript to create simple programs, create simple web applications, and modify web pages.</p>
+
+                    <h4 class="mb-3 mt-4">What you'll learn</h4>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled">
+                          <li class="mb-2">
+                            <i class="bi bi-check-circle text-success me-2"></i>
+                            Recognize the importance of understanding your objectives when addressing an audience.
+                          </li>
+                          <li class="mb-2">
+                            <i class="bi bi-check-circle text-success me-2"></i>
+                            Identify the fundaments of composing a successful close.
+                          </li>
+                          <li class="mb-2">
+                            <i class="bi bi-check-circle text-success me-2"></i>
+                            Explore how to connect with your audience through crafting compelling stories.
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled">
+                          <li class="mb-2">
+                            <i class="bi bi-check-circle text-success me-2"></i>
+                            Examine ways to connect with your audience by personalizing your content.
+                          </li>
+                          <li class="mb-2">
+                            <i class="bi bi-check-circle text-success me-2"></i>
+                            Break down the best ways to exude executive presence.
+                          </li>
+                          <li class="mb-2">
+                            <i class="bi bi-check-circle text-success me-2"></i>
+                            Explore how to communicate the unknown in an impromptu communication.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Reviews Tab -->
+                  <div class="tab-pane fade" id="reviews">
+                    <h3 class="mb-4">How students rated this course</h3>
+                    <div class="row align-items-center mb-5">
+                      <div class="col-auto text-center">
+                        <h2 class="display-4 fw-bold mb-0">4.12</h2>
+                        <div class="text-warning">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="text-muted mb-0">(Based on 50 reviews)</p>
+                      </div>
+                      <div class="col">
+                        <div class="mb-2">
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-3" style="height: 6px;">
+                              <div class="progress-bar bg-warning" style="width: 48%;"></div>
+                            </div>
+                            <span class="text-muted">48%</span>
+                          </div>
+                        </div>
+                        <div class="mb-2">
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-3" style="height: 6px;">
+                              <div class="progress-bar bg-warning" style="width: 32%;"></div>
+                            </div>
+                            <span class="text-muted">32%</span>
+                          </div>
+                        </div>
+                        <div class="mb-2">
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-3" style="height: 6px;">
+                              <div class="progress-bar bg-warning" style="width: 10%;"></div>
+                            </div>
+                            <span class="text-muted">10%</span>
+                          </div>
+                        </div>
+                        <div class="mb-2">
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-3" style="height: 6px;">
+                              <div class="progress-bar bg-warning" style="width: 4%;"></div>
+                            </div>
+                            <span class="text-muted">4%</span>
+                          </div>
+                        </div>
+                        <div class="mb-2">
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-3" style="height: 6px;">
+                              <div class="progress-bar bg-warning" style="width: 6%;"></div>
+                            </div>
+                            <span class="text-muted">6%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr>
+
+                    <h3 class="mb-4">Reviews</h3>
+
+                    <!-- Review 1 -->
+                    <div class="d-flex mb-4 pb-4 border-bottom">
+                      <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="User" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                      <div>
+                        <h5 class="mb-1">Max Hawkins <span class="text-muted fs-6">2 Days ago</span></h5>
+                        <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>Lectures were at a really good pace and I never felt lost. The instructor was well informed and allowed me to learn and navigate Figma easily.</p>
+                        <div>
+                          <span>Was this review helpful?</span>
+                          <a href="#" class="btn btn-sm btn-primary ms-2">Yes</a>
+                          <a href="#" class="btn btn-sm btn-outline-secondary ms-1">No</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="d-flex mb-4 pb-4 border-bottom">
+                      <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="User" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                      <div>
+                        <h5 class="mb-1">Arthur Williamson <span class="text-muted fs-6">3 Days ago</span></h5>
+                        <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>Its pretty good. Just a reminder that there are also students with Windows, meaning Figma is a bit different. Thank you!</p>
+                        <div>
+                          <span>Was this review helpful?</span>
+                          <a href="#" class="btn btn-sm btn-primary ms-2">Yes</a>
+                          <a href="#" class="btn btn-sm btn-outline-secondary ms-1">No</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Transcript Tab -->
+                  <div class="tab-pane fade" id="transcript">
+                    <h3 class="mb-3">Transcript from the "Introduction" Lesson</h3>
+
+                    <div class="mb-4">
+                      <h4>Course Overview <a href="#" class="text-primary">[00:00:00]</a></h4>
+                      <p>My name is John Deo and I work as human duct tape at Gatsby, that means that I do a lot of different things. Everything from dev roll to writing content to writing code. And I used to work as an architect at IBM. I live in Portland, Oregon.</p>
+                    </div>
+
+                    <div class="mb-4">
+                      <h4>Introduction <a href="#" class="text-primary">[00:00:16]</a></h4>
+                      <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                    </div>
+
+                    <div class="mb-4">
+                      <h4>Why Take This Course? <a href="#" class="text-primary">[00:00:37]</a></h4>
+                      <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                    </div>
+                  </div>
+
+                  <!-- FAQ Tab -->
+                  <div class="tab-pane fade" id="faq">
+                    <h3 class="mb-4">Course - Frequently Asked Questions</h3>
+
+                    <div class="mb-4">
+                      <h4>How this course help me to design layout?</h4>
+                      <p>My name is Jason Woo and I work as human duct tape at Gatsby, that means that I do a lot of different things. Everything from dev roll to writing content to writing code. And I used to work as an architect at IBM. I live in Portland, Oregon.</p>
+                    </div>
+
+                    <div class="mb-4">
+                      <h4>What is important of this course?</h4>
+                      <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics.</p>
+                    </div>
+
+                    <div class="mb-4">
+                      <h4>Why Take This Course?</h4>
+                      <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Sidebar -->
+          <div class="col-lg-4 col-md-12" style="margin-top: -150px;">
+            <!-- Course Preview Card -->
+            <div class="card mb-4">
+              <div class="p-2">
+                <div class="rounded position-relative" style="background: url('https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg') center/cover; height: 200px;">
+                  <a href="#" class="position-absolute top-50 start-50 translate-middle bg-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                    <i class="bi bi-play-fill fs-3 text-primary"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <span class="h2 fw-bold text-dark">$600</span>
+                  <del class="text-muted fs-5 ms-2">$750</del>
+                </div>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Start Free Month</a>
+                  <a href="#" class="btn btn-outline-primary">Get Full Access</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- What's Included Card -->
+            <div class="card mb-4 whats-included-card">
+              <div class="card-header bg-white whats-included-header">
+                <h4 class="mb-0">What's included</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item border-bottom whats-included-item">
+                  <i class="bi bi-play-circle text-primary ms-3 me-2"></i> 12 hours video
+                </li>
+                <li class="list-group-item border-bottom whats-included-item">
+                  <i class="bi bi-award text-success ms-3 me-2"></i> Certificate
+                </li>
+                <li class="list-group-item border-bottom whats-included-item">
+                  <i class="bi bi-journal-text text-info ms-3 me-2"></i> 12 Article
+                </li>
+                <li class="list-group-item border-bottom whats-included-item">
+                  <i class="bi bi-download text-secondary ms-3 me-2"></i> Watch Offline
+                </li>
+                <li class="list-group-item whats-included-item">
+                  <i class="bi bi-clock text-warning ms-3 me-2"></i> Lifetime access
+                </li>
+              </ul>
+            </div>
+
+            <!-- Instructor Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="position-relative">
+                    <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="Instructor" class="rounded-circle" style="width: 70px; height: 70px;">
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0">Jenny Wilson</h4>
+                    <p class="mb-1 text-muted">Front-end Developer, Designer</p>
+                    <span class="text-warning">4.5 <i class="bi bi-star-fill"></i></span>
+                    <span class="text-muted">Instructor Rating</span>
+                  </div>
+                </div>
+
+                <div class="row text-center border-top border-bottom py-3 mb-3">
+                  <div class="col">
+                    <h5 class="mb-0">11,604</h5>
+                    <small class="text-muted">Students</small>
+                  </div>
+                  <div class="col border-start">
+                    <h5 class="mb-0">32</h5>
+                    <small class="text-muted">Courses</small>
+                  </div>
+                  <div class="col border-start">
+                    <h5 class="mb-0">12,230</h5>
+                    <small class="text-muted">Reviews</small>
+                  </div>
+                </div>
+
+                <p class="text-muted">I am an Innovation designer focussing on UX/UI based in Berlin. As a creative resident at Figma explored the city of the future and how new technologies.</p>
+                <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Courses Section -->
+        <div class="py-5">
+          <h2 class="mb-4" style="color: #1e293b;">Related Courses</h2>
+          <div class="row">
+            <!-- Course Card 1 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#">
+                  <img src="https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg" class="card-img-top" alt="Course">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-dark text-decoration-none">A Complete Beginner's Guide to JavaScript</a>
+                  </h5>
+                  <ul class="list-inline text-muted small mb-2">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>4h 10m</li>
+                    <li class="list-inline-item"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                  </ul>
+                  <div class="text-warning small">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="text-muted ms-1">(7,500)</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white">
+                  <div class="d-flex align-items-center">
+                    <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="Instructor" class="rounded-circle me-2" style="width: 30px; height: 30px;">
+                    <span class="small">Jenny Wilson</span>
+                    <a href="#" class="ms-auto"><i class="bi bi-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#">
+                  <img src="https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg" class="card-img-top" alt="Course">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-dark text-decoration-none">Applying JavaScript and using the console</a>
+                  </h5>
+                  <ul class="list-inline text-muted small mb-2">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                    <li class="list-inline-item"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="text-warning small">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="text-muted ms-1">(19,500)</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white">
+                  <div class="d-flex align-items-center">
+                    <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="Instructor" class="rounded-circle me-2" style="width: 30px; height: 30px;">
+                    <span class="small">Guy Hawkins</span>
+                    <a href="#" class="ms-auto"><i class="bi bi-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#">
+                  <img src="https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg" class="card-img-top" alt="Course">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-dark text-decoration-none">Creating a Custom Event in Javascript</a>
+                  </h5>
+                  <ul class="list-inline text-muted small mb-2">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                    <li class="list-inline-item"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="text-warning small">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted ms-1">(9,300)</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white">
+                  <div class="d-flex align-items-center">
+                    <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="Instructor" class="rounded-circle me-2" style="width: 30px; height: 30px;">
+                    <span class="small">Juanita Bell</span>
+                    <a href="#" class="ms-auto"><i class="bi bi-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#">
+                  <img src="https://geeks-react.netlify.app/static/media/course-javascript.8afdeff32816e30422da.jpg" class="card-img-top" alt="Course">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-dark text-decoration-none">Modern JavaScript Beginner Tutorial - Simple</a>
+                  </h5>
+                  <ul class="list-inline text-muted small mb-2">
+                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                    <li class="list-inline-item"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                  </ul>
+                  <div class="text-warning small">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted ms-1">(7,800)</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white">
+                  <div class="d-flex align-items-center">
+                    <img src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg" alt="Instructor" class="rounded-circle me-2" style="width: 30px; height: 30px;">
+                    <span class="small">Ted Hawkins</span>
+                    <a href="#" class="ms-auto"><i class="bi bi-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer py-5 border-top">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-6 small text-muted">© 2024 Geeks. All Rights Reserved.</div>
+        <div class="col-md-6">
+          <nav class="nav justify-content-center justify-content-md-end footer-links small">
+            <a class="nav-link text-muted" href="#">Privacy</a>
+            <a class="nav-link text-muted" href="#">Terms</a>
+            <a class="nav-link text-muted" href="#">Feedback</a>
+            <a class="nav-link text-muted" href="#">Support</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Buy Now Floating -->
+  <a href="#" class="btn btn-dark floating-cart-btn shadow d-flex align-items-center px-4 py-3 fw-bold">
+    <i class="bi bi-cart3 me-2"></i> Buy Now
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
