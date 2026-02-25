@@ -98,7 +98,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Landings</a>
             <ul class="dropdown-menu">
               <li>
-                <h4 class="dropdown-header" style="font-size: 11px; color: #64748B;">LANDINGS</h4>
+                <h4 class="dropdown-header" style="font-size: 11px; color: #64748B; font-weight: 500;">LANDINGS</h4>
               </li>
               <li><a class="dropdown-item" href="#">Home Abroad <span class="badge bg-primary ms-1">New</span></a></li>
               <li><a class="dropdown-item" href="#">Home Learning Platform <span class="badge bg-primary ms-1">New</span></a></li>
@@ -179,7 +179,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Accounts</a>
             <ul class="dropdown-menu">
               <li>
-                <h4 class="dropdown-header" style="font-size: 11px; color: #64748B;">ACCOUNTS</h4>
+                <h4 class="dropdown-header" style="font-size: 11px; color: #64748B; font-weight: 500;">ACCOUNTS</h4>
               </li>
               <li><a class="dropdown-item" href="#">Sign In</a></li>
               <li><a class="dropdown-item" href="#">Sign Up</a></li>
@@ -228,7 +228,7 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="bg-primary">
+      <section class="bg-primary hero-section">
         <div class="container">
           <div class="row g-0 align-items-lg-center">
             <div class="col-xl-5 col-lg-6 col-md-12">
@@ -682,39 +682,6 @@
         $('.dropdown-submenu > .dropdown-menu.show').removeClass('show');
       });
 
-    });
-  </script>
-
-  <script>
-    const scrollBtn = document.querySelector(".btn-scroll-top");
-    const progressPath = document.querySelector(".progress-square path");
-    const pathLength = progressPath.getTotalLength();
-
-    progressPath.style.strokeDasharray = pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-
-    // Update progress
-    window.addEventListener("scroll", () => {
-      const scroll = window.scrollY;
-      const height = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = pathLength - (scroll * pathLength / height);
-
-      progressPath.style.strokeDashoffset = progress;
-
-      // Show button after 100px
-      if (scroll > 100) {
-        scrollBtn.classList.add("active");
-      } else {
-        scrollBtn.classList.remove("active");
-      }
-    });
-
-    // Scroll to top when clicked
-    scrollBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
     });
   </script>
 </body>

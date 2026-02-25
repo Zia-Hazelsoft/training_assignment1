@@ -101,7 +101,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: var(--gray-800);
+    color: #1e293b !important;
     font-weight: 500;
     font-size: 0.875rem;
 }
@@ -125,8 +125,8 @@ body {
 
 .dropdown-item {
     font-size: 14px;
-    color: var(--gray-900);
-    font-weight: 500;
+    color: #0f172a !important;
+    font-weight: 500 !important;
     padding: 0.5rem 1.25rem;
 }
 
@@ -333,6 +333,12 @@ body {
     font-size: 2.5rem;
 }
 
+.hero-section p {
+    font-size: 20px !important;
+    color: #FFFFFF80 Im !important;
+    font-weight: 500 !important;
+
+}
 .btn-white {
     font-weight: 600;
     color: #334155;
@@ -617,6 +623,18 @@ body {
         justify-content: flex-start !important;
         padding: 8px 1rem !important;
         border-bottom: 1px solid var(--gray-200);
+        margin-bottom: 8px;
+    }
+
+    #moreOptions .btn-icon {
+        width: auto !important;
+        height: auto !important;
+        display: flex !important;
+        background-color: transparent !important;
+    }
+
+    #moreOptions i {
+        font-size: 20px !important;
     }
 
     .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
@@ -628,19 +646,21 @@ body {
 
     .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after {
         margin-left: auto;
-        padding-right: 1rem;
+        padding-right: 0;
     }
 
     .navbar-nav .nav-item {
         border-bottom: none;
     }
 
-    .navbar-nav .nav-item .dropdown-menu {
+    .navbar-nav .nav-item>.dropdown-menu {
         border: none;
         border-radius: 0;
         box-shadow: none;
         margin: 0;
+        margin-top: 8px !important;
         padding: 0 !important;
+        padding-left: 1.5rem !important;
         background-color: var(--white);
     }
 
@@ -655,11 +675,21 @@ body {
         position: static !important;
         width: 100% !important;
         margin: 0 !important;
+        margin-top: 8px !important;
+        margin-bottom: 12px !important;
         padding: 0 !important;
-        padding-left: 1.5rem !important;
+        padding-left: 0 !important;
         border: none !important;
         box-shadow: none !important;
         display: none;
+    }
+
+    .dropdown-submenu>.dropdown-item {
+        padding-right: 0.5rem !important;
+    }
+
+    .dropdown-submenu>.dropdown-item i {
+        margin-right: 0 !important;
     }
 
     .dropdown-submenu>.dropdown-menu.show {
