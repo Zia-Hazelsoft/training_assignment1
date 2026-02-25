@@ -81,7 +81,7 @@ html::-webkit-scrollbar {
 }
 
 .mt-n8 {
-    margin-top: -5rem !important;
+    margin-top: -3.5rem !important;
 }
 
 .py-5 {
@@ -628,7 +628,6 @@ html::-webkit-scrollbar {
 }
 
 .list-group-item {
-    border: none;
     padding: 0.75rem 0;
     transition: color 0.2s ease;
     font-size: 14px;
@@ -724,6 +723,7 @@ html::-webkit-scrollbar {
 
 .whats-included-header h4 {
     font-size: 16px !important;
+    font-weight: 600 !important;
 }
 
 .whats-included-item {
@@ -910,4 +910,53 @@ html::-webkit-scrollbar {
     .nav-tabs .nav-item {
         flex-shrink: 0;
     }
+}
+
+.py-10 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.course-preview {
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 7.5;
+}
+
+/* Play Button */
+.play-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 14px;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.text-muted {
+    color: var(--gray-900) !important;
+}
+.course-preview span {
+    font-size: 24px !important;
+    color: var(--gray-900) !important;
+}
+
+.fs-4 {
+    font-size: 16px !important;
+    color: #64748B !important;
+}
+
+.btn-primary {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+}
+
+.btn-outline-primary {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+}
+.play-btn:hover {
+    transform: scale(1.08);
 }
