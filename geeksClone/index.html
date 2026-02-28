@@ -15,6 +15,8 @@
   <!-- Slick Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -53,7 +55,7 @@
             <a id="browseLink" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Browse</a>
             <ul id="browseDropdown" class="dropdown-menu">
               <li class="dropend dropdown-submenu">
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                <a class="dropdown-item d-flex align-items-center justify-content-between no-caret" href="#" role="button">
                   Web Development <i class="bi bi-chevron-right ms-2" style="font-size: 0.8rem;"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -69,7 +71,7 @@
                 </ul>
               </li>
               <li class="dropend dropdown-submenu">
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                <a class="dropdown-item d-flex align-items-center justify-content-between no-caret" href="#" role="button">
                   Design <i class="bi bi-chevron-right ms-2" style="font-size: 0.8rem;"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -122,7 +124,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
             <ul class="dropdown-menu">
               <li class="dropend dropdown-submenu">
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                <a class="dropdown-item d-flex align-items-center justify-content-between no-caret" href="#" role="button">
                   Courses <i class="bi bi-chevron-right ms-2" style="font-size: 0.8rem;"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -138,7 +140,7 @@
                 </ul>
               </li>
               <li class="dropend dropdown-submenu">
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                <a class="dropdown-item d-flex align-items-center justify-content-between no-caret" href="#" role="button">
                   Paths <i class="bi bi-chevron-right ms-2" style="font-size: 0.8rem;"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -154,8 +156,8 @@
                 </ul>
               </li>
 
-               <li class="dropend dropdown-submenu">
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+              <li class="dropend dropdown-submenu">
+                <a class="dropdown-item d-flex align-items-center justify-content-between no-caret" href="#" role="button">
                   Blogs <i class="bi bi-chevron-right ms-2" style="font-size: 0.8rem;"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -170,7 +172,7 @@
                   <li><a class="dropdown-item" href="#">Angular</a></li>
                 </ul>
               </li>
-              
+
             </ul>
           </li>
 
@@ -194,9 +196,40 @@
               </span>
             </a>
 
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Documentation</a></li>
-              <li><a class="dropdown-item" href="#">Changelog</a></li>
+            <ul class="dropdown-menu more-options-menu">
+              <li>
+                <a href="#" class="py-2 px-3 dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-file-text text-primary"></i>
+                    <div class="ms-3 lh-1">
+                      <h5 class="mb-0">Documentation</h5>
+                      <p class="mb-0 fs-6">Browse the all documentation</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="py-2 px-3 dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-files text-primary"></i>
+                    <div class="ms-3 lh-1">
+                      <h5 class="mb-0">Snippets <span class="badge bg-primary">New</span></h5>
+                      <p class="mb-0 fs-6">Bunch of Snippet</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="py-2 px-3 dropdown-item border-bottom-0">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-layers text-primary"></i>
+                    <div class="ms-3 lh-1">
+                      <h5 class="mb-0">Changelog <span class="text-primary ms-1">v3.1.0</span></h5>
+                      <p class="mb-0 fs-6">See what's new</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
             </ul>
           </li>
 
@@ -230,11 +263,11 @@
       <!-- Hero Section -->
       <section class="bg-primary hero-section">
         <div class="container">
-          <div class="row g-0 align-items-lg-center">
+          <div class="row g-0 align-items-center">
             <div class="col-xl-5 col-lg-6 col-md-12">
               <div class="py-5 py-lg-0">
-                <h1 class="text-white display-4 fw-bold">Welcome to Geeks UI Learning Application</h1>
-                <p class="text-white-50 mb-4 lead">Hand-picked Instructor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
+                <h1 class="text-white display-4 fw-bold hero-title">Welcome to Geeks UI Learning Application</h1>
+                <p class="text-white-50 mb-4 lead hero-description">Hand-picked Instructor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
                 <a class="btn btn-dark" style="font-size: 14px; color: #fff; padding: 8px 16px; font-weight: 600;" href="#">Browse Courses</a>
                 <a class="btn btn-white" style="font-size: 14px; padding: 8px 16px;" href="#">Are You Instructor?</a>
               </div>
@@ -283,102 +316,105 @@
         <div class="container">
           <div class="mb-4 row">
             <div class="col">
-              <h2 class="mb-0 mx-2">Recommended to you</h2>
+              <h2 class="mb-0 mx-2 section-title">Recommended to you</h2>
             </div>
           </div>
-          <div class="course-slider">
-            <!-- Card: GraphQL -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/graphql.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">GraphQL: introduction to graphQL for beginners</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 40m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">2.5</span> <span class="text-muted">(1,500)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$500</span> <del class="text-muted small">$600</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-6.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Brooklyn Simmons</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: JS -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/js.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="course.html">A Complete Beginner's Guide to JavaScript</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>4h 10m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">3.5</span> <span class="text-muted">(7,500)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$700</span> <del class="text-muted small">$850</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Jenny Wilson</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+          <div class="position-relative">
+
+            <div class="course-slider pb-sm-5 mb-5">
+              <!-- Card: GraphQL -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/graphql.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">GraphQL: introduction to graphQL for beginners</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 40m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">2.5</span> <span class="text-muted">(1,500)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$500</span> <del class="text-muted small">$600</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-6.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Brooklyn Simmons</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Card: Node -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/node.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Beginning Node.js, Express & MongoDB Development</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 00m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">4.0</span> <span class="text-muted">(15,700)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$800</span> <del class="text-muted small">$950</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-3.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sina Ray</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Laravel -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/laravel.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Laravel: The Ultimate Beginner's Guide Step by Step</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 00m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(2,500)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$170</span> <del class="text-muted small">$220</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-9.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sobo Rikhan</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+              <!-- Card: JS -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/js.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="course.html">A Complete Beginner's Guide to JavaScript</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>4h 10m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">3.5</span> <span class="text-muted">(7,500)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$700</span> <del class="text-muted small">$850</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Jenny Wilson</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Card: React -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/react.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">How to easily create a website with React</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 55m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,500)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+              <!-- Card: Node -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/node.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Beginning Node.js, Express & MongoDB Development</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 00m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">4.0</span> <span class="text-muted">(15,700)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$800</span> <del class="text-muted small">$950</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-3.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sina Ray</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-2.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">April Noms</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+              </div>
+              <!-- Card: Laravel -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/laravel.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Laravel: The Ultimate Beginner's Guide Step by Step</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 00m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(2,500)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$170</span> <del class="text-muted small">$220</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-9.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sobo Rikhan</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: React -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100  shadow-sm">
+                  <a href="#"><img src="Images/react.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">How to easily create a website with React</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 55m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,500)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-2.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">April Noms</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -387,220 +423,240 @@
       </section>
 
       <!-- Section 2: Most Popular -->
-      <section class="section-spacing most-popular-section" id="popular-courses">
+      <section class="pb-lg-3 pt-lg-3 section-spacing most-popular-section" id="popular-courses">
         <div class="container">
           <div class="mb-4 row">
             <div class="col">
-              <h2 class="mb-0 mx-2">Most Popular</h2>
+              <h2 class="mb-0 mx-2 section-title">Most Popular</h2>
             </div>
           </div>
-          <div class="course-slider">
-            <!-- Card: HTML -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/html5.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">HTML Full Course - Build a Website Tutorial</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 16m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">3.0</span> <span class="text-muted">(1,600)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$550</span> <del class="text-muted small">$700</del></div>
+          <div class="position-relative">
+            <div class="course-slider pb-sm-5 mb-5">
+              <!-- Card: HTML -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/html5.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">HTML Full Course - Build a Website Tutorial</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 16m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">3.0</span> <span class="text-muted">(1,600)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$550</span> <del class="text-muted small">$700</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-5.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Miston Wilson</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-5.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Miston Wilson</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+              </div>
+              <!-- Card: JavaScript -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100  shadow-sm">
+                  <a href="#"><img src="Images/js.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">A Complete Beginner's Guide to JavaScript</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(7,800)</span></div>
+                    <div class="course-price lh-1">
+                      <span class="text-dark fw-bold fs-5">$600</span>
+                      <del class="text-muted small">$750</del>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-2.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">April Noms</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Node -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/node.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Beginning Node.js, Express & MongoDB Development</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 00m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">4.0</span> <span class="text-muted">(15,700)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$800</span> <del class="text-muted small">$950</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-3.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sina Ray</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Laravel -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/laravel.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Laravel: The Ultimate Beginner's Guide</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 00m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(2,500)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$170</span> <del class="text-muted small">$220</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-9.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sobo Rikhan</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: React -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/react.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">How to easily create a website with React</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 55m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,500)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-9.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">April Noms</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- Card: JavaScript -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/js.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">A Complete Beginner's Guide to JavaScript</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(7,800)</span></div>
-                  <div class="course-price lh-1">
-                    <span class="text-dark fw-bold fs-5">$600</span>
-                    <del class="text-muted small">$750</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-2.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">April Noms</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Node -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/node.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Beginning Node.js, Express & MongoDB Development</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 00m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span><span class="text-warning fw-bold ms-1">4.0</span> <span class="text-muted">(15,700)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$800</span> <del class="text-muted small">$950</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-3.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sina Ray</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Laravel -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/laravel.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Laravel: The Ultimate Beginner's Guide</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 00m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(2,500)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$170</span> <del class="text-muted small">$220</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-9.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Sobo Rikhan</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: React -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/react.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">How to easily create a website with React</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>3h 55m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Advance</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,500)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-9.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">April Noms</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
+
           </div>
+
         </div>
       </section>
 
       <!-- Section 3: Trending -->
-      <section class="section-spacing trending-section" id="trending-courses">
+      <section class="pb-lg-8 pt-lg-3 py-6 section-spacing trending-section" id="trending-courses">
         <div class="container">
           <div class="mb-4 row">
             <div class="col">
-              <h2 class="mb-0 mx-2">Trending</h2>
+              <h2 class="mb-0 mx-2 section-title">Trending</h2>
             </div>
           </div>
-          <div class="course-slider">
-            <!-- Card: Angular -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/angular.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Angular - the complete guide for beginner</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,600)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+
+          <div class="position-relative">
+            <div class="course-slider pb-sm-5 mb-5">
+              <!-- Card: Angular -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/angular.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Angular - the complete guide for beginner</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(1,600)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-4..jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Jacob Jones</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-4..jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Jacob Jones</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+              </div>
+              <!-- Card: CSS -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100  shadow-sm">
+                  <a href="#"><img src="Images/course-css.e2fee8ac50e018baa8fc.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">CSS: ultimate course from beginner to advanced</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(17,000)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-7.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Juanita Bell</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Python -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/course-python.0e5358f9e53a89fd75bd.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">The Python Course: build web application</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(7,800)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-10.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Ted Hawkins</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Wordpress -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/wordpress.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Wordpress: complete WordPress development</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
+                    </ul>
+                    <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(17,000)</span></div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-8.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Claire Robertson</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: GraphQL -->
+              <div class="slide-item">
+                <div class="card course-card card-hover mx-2 h-100 shadow-sm">
+                  <a href="#"><img src="Images/graphql.jpg" class="card-img-top rounded-top" alt=""></a>
+                  <div class="card-body">
+                    <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Getting Started with GraphQL and React</a></h3>
+                    <ul class="mb-3 list-inline course-meta-info">
+                      <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 30m</li>
+                      <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
+                    </ul>
+                    <div class="course-rating small mb-3">
+                      <span class="text-warning">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </span><span class="text-warning ms-1">4.5</span>
+                      <span class="text-muted">(9,300)</span>
+                    </div>
+                    <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$450</span> <del class="text-muted small">$550</del></div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center small"><img src="Images/avatar-6.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Brooklyn Simmons</span></div>
+                    <i class="bi bi-bookmark bookmark-icon text-muted"></i>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- Card: CSS -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/course-css.e2fee8ac50e018baa8fc.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">CSS: ultimate course from beginner to advanced</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(17,000)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-7.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Juanita Bell</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Python -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/course-python.0e5358f9e53a89fd75bd.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">The Python Course: build web application</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 46m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(7,800)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-10.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Ted Hawkins</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Wordpress -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/wordpress.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Wordpress: complete WordPress development</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>1h 30m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Beginner</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(17,000)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$600</span> <del class="text-muted small">$750</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-8.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Claire Robertson</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Card: GraphQL -->
-            <div class="slide-item">
-              <div class="card course-card card-hover mx-2 h-100 border-0 shadow-sm">
-                <a href="#"><img src="Images/graphql.jpg" class="card-img-top rounded-top" alt=""></a>
-                <div class="card-body">
-                  <h3 class="h4 mb-2 course-title"><a class="link-inherit" href="#">Getting Started with GraphQL and React</a></h3>
-                  <ul class="mb-3 list-inline course-meta-info">
-                    <li class="list-inline-item"><i class="bi bi-clock me-1"></i>2h 30m</li>
-                    <li class="list-inline-item ms-2"><i class="bi bi-bar-chart me-1"></i>Intermediate</li>
-                  </ul>
-                  <div class="course-rating small mb-3"><span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span><span class="text-warning fw-bold ms-1">4.5</span> <span class="text-muted">(9,300)</span></div>
-                  <div class="course-price lh-1"><span class="text-dark fw-bold fs-5">$450</span> <del class="text-muted small">$550</del></div>
-                </div>
-                <div class="card-footer">
-                  <div class="d-flex align-items-center small"><img src="Images/avatar-6.jpg" class="rounded-circle avatar-xs me-2" alt=""><span class="instructor-name">Brooklyn Simmons</span></div>
-                  <i class="bi bi-bookmark bookmark-icon text-muted"></i>
-                </div>
-              </div>
-            </div>
+
           </div>
+
+
         </div>
       </section>
     </main>
@@ -608,14 +664,14 @@
     <footer class="footer bg-transparent">
       <div class="container">
         <div class="align-items-center g-0 border-top py-2 row">
-          <div class="text-center text-md-start col-md-6 col-sm-12"><span>© 2024 Geeks. All Rights Reserved.</span></div>
+          <div class="text-center text-md-start col-md-6 col-sm-12" style="color: #475569;"><span>© 2024 Geeks. All Rights Reserved.</span></div>
           <div class="col-md-6 col-sm-12">
             <nav class="nav nav-footer justify-content-center justify-content-md-end"><a class="nav-link active ps-0" href="/">Privacy</a><a class="nav-link" href="/">Terms </a><a class="nav-link" href="/">Feedback</a><a class="nav-link" href="/">Support</a></nav>
           </div>
         </div>
       </div>
       <!-- Buy Now Floating -->
-      <a href="#" class="btn btn-dark floating-cart-btn shadow d-flex align-items-center fw-bold">
+      <a href="#" class="btn btn-dark floating-cart-btn ">
         <i class="bi bi-cart3 me-2"></i> <span>Buy Now</span>
       </a>
     </footer>
